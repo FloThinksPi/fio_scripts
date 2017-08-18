@@ -610,7 +610,7 @@ cat << EOF
 [job]
 rw=randrw
 rwmixread=80
-bs=8k
+bs=${READSIZE}k
 sync=0
 numjobs=$USERS
 EOF
@@ -637,7 +637,7 @@ for i in 1 ; do
 cat << EOF
 [job$JOBNUMBER]
 rw=randread
-bs=8k
+bs=${WRITESIZE}k
 numjobs=1
 offset=$OFFSET
 EOF
